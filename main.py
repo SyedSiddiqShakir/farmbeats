@@ -71,7 +71,7 @@ def get_weather_impact(weather):
 
 # --- PAGE 1: EXECUTIVE DASHBOARD ---
 def show_dashboard():
-    st.title("🚜 Farm Monitor")
+    st.title("Farm Monitor")
     st.caption("📍 Zwickau Farm")
 
     # Weather Control Simulation
@@ -79,7 +79,7 @@ def show_dashboard():
         weather_state = st.selectbox("Simulate Weather Condition", ["Sunny", "Cloudy", "Storm"])
         batt_level, solar_input, mode = get_weather_impact(weather_state)
     
-    st.markdown("### 📡 System Status")
+    st.markdown("### System Status")
     
     # Top Metrics Row
     col1, col2, col3, col4 = st.columns(4)
@@ -370,4 +370,5 @@ elif page == "Field Map":
 elif page == "Drone Flight":
     show_drone_planner()
 elif page == "Soil Analytics":
+
     show_analytics()
